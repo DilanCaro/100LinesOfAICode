@@ -13,7 +13,7 @@ sys.path.append(str(BASE.parent))
 from rag import MiniRAG
 app = Flask(__name__)
 UPLOADS = BASE / "uploads"
-KB = BASE / "knowledge_base.json"
+KB = BASE.parent / "knowledge_base.json"
 UPLOADS.mkdir(exist_ok=True)
 rag = MiniRAG()
 if KB.exists():
